@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kali-ai"
+version = "0.1.0"
+description = "A modular, local-first personal AI computer assistant for Kali Linux."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Kali AI Team" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: X11 Applications :: Gnome",
+]
+
+[project.scripts]
+kali-ai = "kali_ai.main:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+asyncio_mode = "auto"
